@@ -1,4 +1,8 @@
-﻿namespace SistemaSaude.Models
+﻿using System;
+using System.Data;
+using System.Numerics;
+
+namespace SistemaSaude.Models
 {
     public class PacienteModel
     {
@@ -6,6 +10,6 @@
         public string? Nome { get; set; }
         public string? DataNasc { get; set; }
         public string? RG { get; set; }
-        public int CartaoSUS { get; set; }
+        public long CartaoSUS { get; set; }
     }
 }

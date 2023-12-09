@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using SistemaSaude.Data;
+using SistemaSaude.Repositorios;
+using SistemaSaude.Repositorios.Interfaces;
+
 namespace SistemaSaude
 {
     public class Program
@@ -12,6 +17,14 @@ namespace SistemaSaude
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddEntityFrameworkSqlServer()
+                .AddDbContext<SistemaSaudeDBContext>(
+                    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
+                );
+
+            builder.Services.AddScoped<IPacienteRepositorio, PacienteRepositorio>();
+            builder.Services.AddScoped<IMedicoRepositorio, MedicoRepositorio>();
 
             var app = builder.Build();
 
