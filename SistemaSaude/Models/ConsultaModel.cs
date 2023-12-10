@@ -8,9 +8,11 @@ namespace SistemaSaude.Models
         public string? TipoConsulta { get; set; }
         public string? DataConsulta { get; set; }
         public string? LocalConsulta { get; set; }
-        public string? Medico { get; set; }
-        public string? Paciente { get; set; }
         public StatusTarefa Status { get; set; }
+        public int PacienteId { get; set; }
+        public int MedicoId { get; set; }
+        public virtual PacienteModel Paciente { get; set; }
+        public virtual MedicoModel Medico { get; set; }
 
     }
 }

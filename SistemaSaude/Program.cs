@@ -25,6 +25,7 @@ namespace SistemaSaude
 
             builder.Services.AddScoped<IPacienteRepositorio, PacienteRepositorio>();
             builder.Services.AddScoped<IMedicoRepositorio, MedicoRepositorio>();
+            builder.Services.AddScoped<IConsultaRepositorio, ConsultaRepositorio>();
 
             var app = builder.Build();
 

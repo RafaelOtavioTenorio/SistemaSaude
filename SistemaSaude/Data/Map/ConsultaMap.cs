@@ -13,9 +13,12 @@ namespace SistemaSaude.Data.Map
             builder.Property(x => x.TipoConsulta).IsRequired().HasMaxLength(255);
             builder.Property(x => x.DataConsulta).IsRequired().HasMaxLength(8);
             builder.Property(x => x.LocalConsulta).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.Medico).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.Paciente).IsRequired().HasMaxLength(255);
+            builder.Property(x => x.MedicoId).IsRequired();
+            builder.Property(x => x.PacienteId).IsRequired();
             builder.Property(x => x.Status).IsRequired();
+
+            builder.HasOne(x => x.Paciente);
+            builder.HasOne(x => x.Medico);
         }
     }
 }

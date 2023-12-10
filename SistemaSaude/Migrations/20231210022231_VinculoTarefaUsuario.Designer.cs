@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaSaude.Data;
 
@@ -10,9 +11,10 @@ using SistemaSaude.Data;
 namespace SistemaSaude.Migrations
 {
     [DbContext(typeof(SistemaSaudeDBContext))]
-    partial class SistemaSaudeDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231210022231_VinculoTarefaUsuario")]
+    partial class VinculoTarefaUsuario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
