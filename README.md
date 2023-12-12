@@ -27,3 +27,15 @@
   Data da consulta,
   Status,
   ID ]
+# CRUD de pacientes e médicos contém as seguintes opções
+ [ Adicionar,
+ Buscar todos,
+ Buscar por ID,
+ Atualizar,
+ Apagar ]
+# Requisitos
+ Máquina deve ter instalada SQL Server e SQL Management Studio
+ A linha de código a seguir deve se executada no console do gerenciador de pacotes do visual studio parar criar as tabelas:
+   Update-Database -Context SistemaSaudeDBContext
+# Anotações
+ Por boas práticas, após commit inicial, todos outros commits foram feitos na branch develop, e quando finalizado foi feito o merge final de volta para a main.
