@@ -8,7 +8,7 @@
 # Estrutura das tabelas
  A aplicação possui três tabelas, uma para pacientes, uma para médicos cadastrados, e outra para as consultas.
  As informações contidas nessas tabelas foram as que imaginei ser cruciais para um agendamento de consulta em um sistema de saúde.
- ## Tabela Paciente:
+ ## Tabela Paciente
   [ Nome,
   Data de nascimento,
   RG,
